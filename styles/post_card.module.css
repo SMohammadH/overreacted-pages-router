@@ -1,0 +1,19 @@
+.post {
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 60px;
+}
+
+.post:hover {
+  transform: scale(1.01);
+}
+
+.post_title {
+  color: var(--link);
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.post_date {
+  padding: 2px 0;
+  font-size: 13px;
+}
