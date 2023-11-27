@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import styles from "/styles/post_page.module.css";
+import styles from "/styles/post/Post.module.css";
 import { useRouter } from "next/router";
 import { montserrat } from "../fonts";
 
@@ -33,7 +33,7 @@ export default function PostPage() {
             year: "numeric",
           })}
         </p>
-        <p>{data.body}</p>
+        <p className={`${styles.body}`}>{data.body}</p>
       </div>
     );
   }

@@ -4,7 +4,11 @@
   line-height: 44px;
 }
 
+.body {
+  font-size: 18px;
+}
+
 .date {
-  font-size: 13px;
+  font-size: 14px;
   padding: 5px 0 30px 0;
 }

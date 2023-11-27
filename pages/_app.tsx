@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { AppProps } from "next/app";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { montserrat } from "./fonts";
 import { Provider } from "react-redux";
 import { store, persistor } from "@/store/store";
@@ -15,8 +15,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       new QueryClient({
         defaultOptions: {
           queries: {
-            // With SSR, we usually want to set some default staleTime
-            // above 0 to avoid refetching immediately on the client
             staleTime: 60 * 1000,
           },
         },

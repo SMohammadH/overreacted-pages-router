@@ -1,5 +1,3 @@
-// store/reducers/themeSlice.js
-
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -17,7 +15,6 @@ export const themeSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
 export const { toggleTheme } = themeSlice.actions;
 
 export default themeSlice.reducer;
