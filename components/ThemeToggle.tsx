@@ -1,11 +1,11 @@
-import { useSelector, useDispatch } from "react-redux";
 import { toggleTheme } from "../store/reducers/themeSlice";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useEffect } from "react";
+import { useAppSelector, useAppDispatch } from "../store/hooks";
 
 export default function Square() {
-  const dispatch = useDispatch();
-  const { theme } = useSelector((state) => state.theme);
+  const dispatch = useAppDispatch();
+  const { theme } = useAppSelector((state) => state.theme);
 
   useEffect(() => {
     if (theme) {
