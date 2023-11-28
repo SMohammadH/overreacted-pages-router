@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { AppProps } from "next/app";
 import Link from "next/link";
 import React from "react";
-import { montserrat } from "./fonts";
+import { montserrat } from "../assets/fonts";
 import { Provider } from "react-redux";
 import { store, persistor } from "@/store/store";
 import ThemeToggle from "@/components/ThemeToggle";

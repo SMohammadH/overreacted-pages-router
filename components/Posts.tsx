@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import styles from "@/styles/post_card.module.css";
-import { montserrat } from "./fonts";
+import { montserrat } from "../assets/fonts";
 
 export type Post = {
   id: number;
@@ -31,7 +31,7 @@ export async function getStaticProps() {
   return { props: { posts } };
 }
 
-export function Posts(props: any) {
+export default function Posts(props: any) {
   const { data } = useQuery({
     queryKey: ["posts"],
     queryFn: getPosts,

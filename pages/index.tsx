@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import { merriweather } from "./fonts";
-import { Posts } from "./_posts";
+import { merriweather } from "../assets/fonts";
+import Posts from "../components/Posts";
 
 export default function Home() {
   return (

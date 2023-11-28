@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import styles from "/styles/post/Post.module.css";
 import { useRouter } from "next/router";
-import { montserrat } from "../fonts";
+import { montserrat } from "../../assets/fonts";
 
 async function getPost(id: string) {
   const post = await fetch(
@@ -14,10 +14,11 @@ async function getPost(id: string) {
 
 export default function PostPage() {
   const router = useRouter();
+  const { slug } = router.query as { slug: string };
 
   const { data } = useQuery({
-    queryKey: ["post", router.query.slug],
-    queryFn: () => getPost(router.query.slug.toString()),
+    queryKey: ["post", slug],
+    queryFn: () => getPost(slug.toString()),
   });
 
   if (data) {
